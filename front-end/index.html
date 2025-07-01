@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f2f5f7;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #2c3e50;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .navbar-left, .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .navbar-left a,
+    .navbar-right a {
+      background: #3498db;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar-left a:hover,
+    .navbar-right a:hover {
+      background: #2980b9;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 340px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-icon {
+      width: 70px;
+      height: 70px;
+      background: #3498db;
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .info-row label {
+      width: 40%;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .info-row input {
+      width: 55%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .card-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .card button {
+      flex: 1;
+      margin: 0 0.3rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .edit-btn { background: #f1c40f; }
+    .delete-btn { background: #e74c3c; color: white; }
+    .save-btn { background: #2ecc71; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <h1>Employee Dashboard</h1>
+      <a href="add.html">+ Add Employee</a>
+    </div>
+    <div class="navbar-right">
+      <a href="login.html" id="login-link">Login</a>
+      <a href="register.html" id="signup-link">Sign Up</a>
+      <a href="#" id="logout-link" style="display:none;">Logout</a>
+    </div>
+  </div>
+
+  <div class="cards-container" id="main"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
